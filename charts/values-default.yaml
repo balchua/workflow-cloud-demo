@@ -1,0 +1,16 @@
+namespace: workflow
+replicaCount: 1
+
+service:
+  port: 9091
+  protocol: TCP
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1024Mi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+

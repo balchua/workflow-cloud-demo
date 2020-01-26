@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ template "workflow_cloud_demo.name" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: {{ template "workflow_cloud_demo.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - protocol: {{ .Values.service.protocol }}
+    port: {{ .Values.service.port }}
+    name: http
+  selector:
+    app.kubernetes.io/name: {{ template "workflow_cloud_demo.name" . }}

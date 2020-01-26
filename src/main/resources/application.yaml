@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: "cloud-demo"
+  rabbitmq:
+    addresses: "amqp://user:PASSWORD@10.152.183.148:5672"
+  main:
+    allow-bean-definition-overriding: true

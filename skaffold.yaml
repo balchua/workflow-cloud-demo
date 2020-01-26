@@ -1,0 +1,26 @@
+apiVersion: skaffold/v1
+kind: Config
+profiles:
+  - name: local
+    build:
+      artifacts:
+        - image: localhost:32000/workflow-cloud-demo
+          context: .
+          jib: {}
+      local:
+        push: true
+    deploy:
+      helm:
+        flags:
+          upgrade:
+            - --install
+        releases:
+          - name: workflow-cloud-demo
+            chartPath: charts
+            namespace: workflow
+            wait: true
+            valuesFiles:
+              - charts/values-default.yaml
+              - charts/values-local.yaml
+            values:
+              image.repository: localhost:32000/workflow-cloud-demo

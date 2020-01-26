@@ -1,0 +1,4 @@
+apiVersion: v1
+description: A Helm chart for Workflow cloud demo
+name: workflow-cloud-demo
+version: 0.0.1

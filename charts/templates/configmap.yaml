@@ -1,0 +1,6 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name:  {{ template "workflow_cloud_demo.name" . }}
+  namespace: {{.Release.Namespace}}
+data:
