@@ -13,7 +13,7 @@
         <bpmn2:startEvent id="StartEvent_1">
             <bpmn2:outgoing>SequenceFlow_0qdq7ff</bpmn2:outgoing>
         </bpmn2:startEvent>
-        <bpmn2:userTask id="UserTask_0b6cp1l" name="User Task 1" activiti:assignee="testuser">
+        <bpmn2:userTask id="UserTask_0b6cp1l" name="User Task 1" activiti:assignee="balchua">
             <bpmn2:incoming>SequenceFlow_0qdq7ff</bpmn2:incoming>
             <bpmn2:outgoing>SequenceFlow_1sc9dgy</bpmn2:outgoing>
         </bpmn2:userTask>
