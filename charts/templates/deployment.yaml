@@ -16,8 +16,6 @@ spec:
       app.kubernetes.io/name: {{ template "workflow_cloud_demo.name" . }}
   template:
     metadata:
-      annotations:
-        linkerd.io/inject: enabled
       labels:
         app.kubernetes.io/name: {{ template "workflow_cloud_demo.name" . }}
         release: {{ .Release.Name }}
@@ -35,8 +33,8 @@ spec:
             cpu: "{{ .Values.resources.requests.cpu }}"
           limits:
             memory: "{{ .Values.resources.limits.memory }}"
-            cpu: "{{ .Values.resources.limits.cpu }}"
+#            cpu: "{{ .Values.resources.limits.cpu }}"
 
       restartPolicy: Always
-      terminationGracePeriodSeconds: 30
+      terminationGracePeriodSeconds: 10
       dnsPolicy: ClusterFirst

@@ -2,7 +2,7 @@ namespace: workflow
 replicaCount: 1
 
 service:
-  port: 9091
+  port: 8080
   protocol: TCP
 
 resources:

@@ -15,8 +15,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <properties>
-        <base-image>adoptopenjdk/openjdk11:jdk-11.0.3_7-debian-slim</base-image>
-        <activiti-cloud-runtime-bundle-service.version>7.0.0.GA</activiti-cloud-runtime-bundle-service.version>
+        <base-image>adoptopenjdk/openjdk11:jdk-11.0.6_10-debian-slim</base-image>
+        <activiti-cloud-runtime-bundle-service.version>7.1.0.M5</activiti-cloud-runtime-bundle-service.version>
         <java.version>11</java.version>
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
@@ -28,7 +28,6 @@
         <mockito.version>2.24.0</mockito.version>
         <micrometer.registry.version>1.2.0</micrometer.registry.version>
         <assertj-version>3.6.1</assertj-version>
-        <google-common-protos.version>0.1.9</google-common-protos.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
     </properties>
@@ -102,20 +101,6 @@
             <scope>provided</scope>
         </dependency>
 
-
-        <!-- Marker Pom for Dependency Conversion Validation  -->
-        <dependency>
-            <groupId>org.activiti.cloud.rb</groupId>
-            <artifactId>activiti-cloud-runtime-bundle-dependencies</artifactId>
-            <version>${activiti-cloud-runtime-bundle-service.version}</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-parent</artifactId>
-            <version>${project.parent.version}</version>
-            <type>pom</type>
-        </dependency>
     </dependencies>
 
     <build>
